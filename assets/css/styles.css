@@ -1,0 +1,28 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+html,
+body {
+    /* A4大小 */
+    width: 210mm;
+    height: 297mm;
+    font-size: normal;
+}
+
+.bg-my {
+    background-color: rgb(96, 122, 159);
+}
+
+.text-my {
+    color: rgb(96, 122, 159);
+}
+
+section>.section-title {
+    width: 130px;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    height: 33px;
+}
