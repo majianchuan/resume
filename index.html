@@ -1,177 +1,189 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>简历</title>
-    <link rel="stylesheet" href="./modern-normalize.min.css" />
-    <link rel="stylesheet" href="./base.css" />
-    <style>
-      body {
-        padding: 3rem;
-        line-height: 1.7;
-      }
-      main {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-      ul {
-        padding-inline-start: 20px;
-      }
-      .project-experience-item header {
-        display: flex;
-        flex-direction: row;
-      }
-      .project-experience-item header span:nth-of-type(1) {
-        margin-left: 1rem;
-      }
-      .project-experience-item header span:nth-last-of-type(1) {
-        margin-left: auto;
-        color: gray;
-      }
-      .educational-background-item header {
-        display: flex;
-        flex-direction: row;
-      }
-      .educational-background-item header span:nth-of-type(-n + 2) {
-        margin-left: 2rem;
-      }
-      .educational-background-item header span:nth-last-of-type(1) {
-        margin-left: auto;
-        color: gray;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1 style="margin: 0">马见川</h1>
-      <p>男 | 21岁 | 电话：15193169439 | 邮箱：mjcgc@qq.com</p>
-    </header>
 
-    <main>
-      <section>
-        <h2>专业技能</h2>
-        <hr />
-        <ul>
-          <li>
-            熟悉 C# 语言特性及 .NET 开发生态，能够使用 ASP.NET Core 开发 RESTful
-            API，并基于 WPF、Photino.NET 等技术开发桌面应用。
-          </li>
-          <li>熟悉 EF Core 的实体建模、迁移管理及 LINQ 查询</li>
-          <li>
-            能够使用 React/Vue3 + TypeScript
-            独立完成前端项目开发，了解组件化开发及状态管理。
-          </li>
-          <li>
-            实践过整洁架构、垂直切片架构、模块化单体架构、前端 FSD
-            架构等架构模式，可以开发出具备高可维护性和高可扩展性的程序
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>项目经历</h2>
-        <hr />
-        <div style="display: flex; gap: 1rem; flex-direction: column">
-          <div class="project-experience-item">
-            <header>
-              <h4>ScreenTimeTracker（桌面使用时间统计与分析工具）</h4>
-              <span>个人项目</span>
-              <span>2024.10-至今</span>
-            </header>
-            <p>
-              技术栈：.NET 10、Photino.NET、FastEndpoints、EF
-              Core、SQLite、React、TypeScript、Material UI<br />
-            </p>
-            <p>项目介绍：</p>
-            <ul>
-              <li>
-                采用本地 ASP.NET Core API + Photino.NET +
-                React，将桌面生命周期管理、业务逻辑和 UI
-                展示分离，提高代码可维护性。
-              </li>
-              <li>
-                后端采用模块化单体架构，结合 Mediator 解耦业务请求与处理逻辑。
-              </li>
-              <li>前端采用 FSD 架构组织代码，提高模块复用性和可维护性。</li>
-              <li>使用 Serilog 实现结构化日志记录，便于运行监控与问题排查。</li>
-              <li>
-                使用 FastEndpoints 构建本地 RESTful API，基于 EF Core + SQLite
-                完成数据持久化及业务逻辑开发。
-              </li>
-              <li>
-                使用 ECharts
-                实现屏幕使用数据可视化展示，实现日、周、月维度的数据分析图表，支持查看某天的使用情况时间线等统计，提高数据可读性。
-              </li>
-              <li>
-                通过事件驱动的数据采集流程与定时保存机制，在降低 IO 与 CPU
-                开销的同时保证了长期运行稳定性和数据完整。
-              </li>
-              <li>
-                实现电脑屏幕使用时长采集、统计及历史记录管理，支持开机自启动，空闲时间检测，数据优化，导入导出数据，按日期查看使用情况。
-              </li>
-              <li>GitHub 130+ Star，项目交流群 300+ 用户</li>
-            </ul>
-          </div>
-          <div class="project-experience-item">
-            <header>
-              <h4>兰州大学评估整改工作填报系统</h4>
-              <span>校内个人项目</span>
-              <span>2025.01 - 2025.03</span>
-            </header>
-            <p>技术栈：Python、Flask、SQLite、Vue3、TypeScript、ElementPlus</p>
-            <p>项目介绍：</p>
-            <ul>
-              <li>
-                面向兰州大学教育教学评估整改工作的在线填报系统，支持整改信息填报、统计及汇总。
-              </li>
-              <li>独立完成前后端开发，采用 RESTful API 实现前后端分离。</li>
-              <li>
-                实现用户认证及多角色权限管理，保障不同角色的数据访问权限。
-              </li>
-              <li>实现 Excel 数据批量导入导出，提高整改数据录入和汇总效率。</li>
-              <li>
-                实现数据查询、统计报表及可视化展示，方便管理人员查看整改进度。
-              </li>
-            </ul>
-          </div>
-          <div class="project-experience-item">
-            <header>
-              <h4>兰州大学优秀笔记投票系统</h4>
-              <span>校内团队项目</span>
-              <span>2023.01 - 2023.12</span>
-            </header>
-            <p>技术栈：Python、Django、MySQL、Vue3、TypeScript</p>
-            <p>项目介绍：</p>
-            <ul>
-              <li>
-                面向兰州大学优秀笔记评选活动的线上投票系统，支持作品展示、在线投票及结果统计。
-              </li>
-              <li>参与后端开发，负责数据库模型设计及投票相关业务逻辑实现。</li>
-              <li>
-                基于浏览器指纹实现匿名用户身份识别，限制重复投票，提高投票结果的真实性。
-              </li>
-              <li>
-                完成前端主要页面开发，实现作品展示、投票交互及结果展示等功能。
-              </li>
-              <li>实现投票数据统计及结果导出，支持评选工作的后续汇总分析。</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>教育经历</h2>
-        <hr />
-        <div class="educational-background-item">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简历</title>
+  <link rel="stylesheet" href="./modern-normalize.min.css" />
+  <link rel="stylesheet" href="./base.css" />
+  <style>
+    body {
+      padding: 3rem;
+      line-height: 1.7;
+    }
+
+    main {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+
+    .project-experience-item header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .project-experience-item header span:nth-of-type(1) {
+      margin-left: 1rem;
+    }
+
+    .project-experience-item header span:nth-last-of-type(1) {
+      margin-left: auto;
+      color: gray;
+    }
+
+    .educational-background-item header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .educational-background-item header span:nth-of-type(-n + 2) {
+      margin-left: 2rem;
+    }
+
+    .educational-background-item header span:nth-last-of-type(1) {
+      margin-left: auto;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="margin: 0">马见川</h1>
+    <p>男 | 21岁 | 电话：15193169439 | 邮箱：mjcgc@qq.com</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>专业技能</h2>
+      <hr />
+      <ul>
+        <li>
+          熟悉 C# 语言特性及 .NET 开发生态，能够使用 ASP.NET Core 开发 RESTful
+          API，并基于 WPF、Photino.NET 等技术开发桌面应用。
+        </li>
+        <li>熟悉 EF Core 的实体建模、迁移管理及 LINQ 查询</li>
+        <li>
+          能够使用 React/Vue3 + TypeScript
+          独立完成前端项目开发，了解组件化开发及状态管理。
+        </li>
+        <li>
+          实践过整洁架构、垂直切片架构、模块化单体架构、前端 FSD
+          架构等架构模式，可以开发出具备高可维护性和高可扩展性的程序
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>项目经历</h2>
+      <hr />
+      <div style="display: flex; gap: 1rem; flex-direction: column">
+        <div class="project-experience-item">
           <header>
-            <h4>兰州大学</h4>
-            <span>本科</span>
-            <span>计算机科学与技术</span>
-            <span>2024.09 ~ 至今</span>
+            <h4>ScreenTimeTracker（桌面使用时间统计与分析工具）</h4>
+            <span>个人项目</span>
+            <span>2024.10-至今</span>
           </header>
+          <p>
+            技术栈：.NET 10、Photino.NET、FastEndpoints、EF
+            Core、SQLite、React、TypeScript、Material UI<br />
+          </p>
+          <p>项目介绍：</p>
+          <ul>
+            <li>
+              采用本地 ASP.NET Core API + Photino.NET +
+              React，将桌面生命周期管理、业务逻辑和 UI
+              展示分离，提高代码可维护性。
+            </li>
+            <li>
+              后端采用模块化单体架构，结合 Mediator 解耦业务请求与处理逻辑。
+            </li>
+            <li>前端采用 FSD 架构组织代码，提高模块复用性和可维护性。</li>
+            <li>使用 Serilog 实现结构化日志记录，便于运行监控与问题排查。</li>
+            <li>
+              使用 FastEndpoints 构建本地 RESTful API，基于 EF Core + SQLite
+              完成数据持久化及业务逻辑开发。
+            </li>
+            <li>使用 ErrorOr 代替部分异常抛出，减小抛异常带来的开销和异常未被处理的风险。</li>
+            <li>
+              使用 ECharts
+              实现屏幕使用数据可视化展示，实现日、周、月维度的数据分析图表，支持查看某天的使用情况时间线等统计，提高数据可读性。
+            </li>
+            <li>
+              通过事件驱动的数据采集流程与定时保存机制，在降低 IO 与 CPU
+              开销的同时保证了长期运行稳定性和数据完整。
+            </li>
+            <li>
+              实现电脑屏幕使用时长采集、统计及历史记录管理，支持开机自启动，空闲时间检测，数据优化，导入导出数据，按日期查看使用情况。
+            </li>
+            <li>GitHub 130+ Star，项目交流群 300+ 用户</li>
+          </ul>
         </div>
-      </section>
-    </main>
-  </body>
+        <div class="project-experience-item">
+          <header>
+            <h4>兰州大学评估整改工作填报系统</h4>
+            <span>校内个人项目</span>
+            <span>2025.01 - 2025.03</span>
+          </header>
+          <p>技术栈：Python、Flask、SQLite、Vue3、TypeScript、ElementPlus</p>
+          <p>项目介绍：</p>
+          <ul>
+            <li>
+              面向兰州大学教育教学评估整改工作的在线填报系统，支持整改信息填报、统计及汇总。
+            </li>
+            <li>独立完成前后端开发，采用 RESTful API 实现前后端分离。</li>
+            <li>
+              实现用户认证及多角色权限管理，保障不同角色的数据访问权限。
+            </li>
+            <li>实现 Excel 数据批量导入导出，提高整改数据录入和汇总效率。</li>
+            <li>
+              实现数据查询、统计报表及可视化展示，方便管理人员查看整改进度。
+            </li>
+          </ul>
+        </div>
+        <div class="project-experience-item">
+          <header>
+            <h4>兰州大学优秀笔记投票系统</h4>
+            <span>校内团队项目</span>
+            <span>2023.01 - 2023.12</span>
+          </header>
+          <p>技术栈：Python、Django、MySQL、Vue3、TypeScript</p>
+          <p>项目介绍：</p>
+          <ul>
+            <li>
+              面向兰州大学优秀笔记评选活动的线上投票系统，支持作品展示、在线投票及结果统计。
+            </li>
+            <li>参与后端开发，负责数据库模型设计及投票相关业务逻辑实现。</li>
+            <li>
+              基于浏览器指纹实现匿名用户身份识别，限制重复投票，提高投票结果的真实性。
+            </li>
+            <li>
+              完成前端主要页面开发，实现作品展示、投票交互及结果展示等功能。
+            </li>
+            <li>实现投票数据统计及结果导出，支持评选工作的后续汇总分析。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>教育经历</h2>
+      <hr />
+      <div class="educational-background-item">
+        <header>
+          <h4>兰州大学</h4>
+          <span>本科</span>
+          <span>计算机科学与技术</span>
+          <span>2024.09 ~ 至今</span>
+        </header>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
