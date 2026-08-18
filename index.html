@@ -86,13 +86,13 @@
       <div style="display: flex; gap: 1rem; flex-direction: column">
         <div class="project-experience-item">
           <header>
-            <h4>ScreenTimeTracker（桌面使用时间统计与分析工具）</h4>
+            <h4>Screen Time Tracker（桌面使用时间统计与分析工具）</h4>
             <span>个人项目</span>
             <span>2024.10-至今</span>
           </header>
           <p>
             技术栈：.NET 10、Photino.NET、FastEndpoints、EF
-            Core、SQLite、React、TypeScript、Material UI<br />
+            Core、SQLite、React、TypeScript、Material UI、WXT<br />
           </p>
           <p>项目介绍：</p>
           <ul>
@@ -105,19 +105,26 @@
               后端采用模块化单体架构，结合 Mediator 解耦业务请求与处理逻辑。
             </li>
             <li>前端采用 FSD 架构组织代码，提高模块复用性和可维护性。</li>
+            <li>
+              基于框架开发配套浏览器扩展，将监控能力扩展至标签页，实现网页级使用时长的精准统计。
+            </li>
             <li>使用 Serilog 实现结构化日志记录，便于运行监控与问题排查。</li>
+            <li>引入架构测试对模块依赖与分层规范等进行自动化校验，防止代码演进过程中的架构腐化</li>
             <li>
               使用 FastEndpoints 构建本地 RESTful API，基于 EF Core + SQLite
               完成数据持久化及业务逻辑开发。
             </li>
             <li>使用 ErrorOr 代替部分异常抛出，减小抛异常带来的开销和异常未被处理的风险。</li>
             <li>
-              使用 ECharts
-              实现屏幕使用数据可视化展示，实现日、周、月维度的数据分析图表，支持查看某天的使用情况时间线等统计，提高数据可读性。
-            </li>
-            <li>
               通过事件驱动的数据采集流程与定时保存机制，在降低 IO 与 CPU
               开销的同时保证了长期运行稳定性和数据完整。
+            </li>
+            <li>
+              引入事件处理管道，异步处理系统顶层窗口事件与浏览器扩展上报数据，有效消除并发竞争与线程安全隐患。
+            </li>
+            <li>
+              使用 ECharts
+              实现屏幕使用数据可视化展示，实现日、周、月维度的数据分析图表，支持查看某天的使用情况时间线等统计，提高数据可读性。
             </li>
             <li>
               实现电脑屏幕使用时长采集、统计及历史记录管理，支持开机自启动，空闲时间检测，数据优化，导入导出数据，按日期查看使用情况。
